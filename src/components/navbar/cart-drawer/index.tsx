@@ -36,7 +36,6 @@ export function CartDrawer() {
 
   const handleIncreaseQuantity = (item: CartItem) => {
     dispatch(increaseQuantity(item.id));
-    dispatch(addItem(item)); // This seems redundant if increaseQuantity already handles quantity increment.
   };
   
   const totalCost = cart.cart.reduce(
