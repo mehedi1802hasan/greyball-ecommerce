@@ -5,7 +5,7 @@ import ProductList from '@/components/product-list';
 
 export const metadata = {
   title: 'greyball-ecommerce',
-  description: 'explore our product list page',
+  description: 'explore our book product list page',
 };
 
 export default function Home() {

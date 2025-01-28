@@ -15,11 +15,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: "greyball-ecommerce",
-//   description: "explore our product list page",
-// };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <head>
+        <meta name="description" content="A modern e-commerce site to explore and purchase books." />
+        <meta name="robots" content="index, follow" />
+      </head>
       <body suppressHydrationWarning 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
