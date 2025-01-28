@@ -23,7 +23,7 @@ export function BookCard({ book, handleAddToCart }: BookCardProps) {
         className="w-full h-36 md:h-48 lg:h-48 object-cover rounded-t-lg "
       />
       <h3 className="mt-2 text-base font-semibold text-center">{book.title}</h3>
-      <p className="text-[13px] text-gray-600 h-[82px] md:h-[60px] lg:h-[60px]">
+      <p className="text-[13px] text-gray-600 h-[75px] md:h-[88px] lg:h-[50px]">
         {book.description.split(" ").slice(0, 10).join(" ")}
         {book.description.split(" ").length > 5 && "..."}
       </p>
