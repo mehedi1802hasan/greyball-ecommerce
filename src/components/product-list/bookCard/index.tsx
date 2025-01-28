@@ -1,12 +1,16 @@
 import star from "../../../../public/star.png";
 import Image from "next/image";
 
-export type Book = {
-  image: string;
+
+type Book = {
+  id: string;
   title: string;
   description: string;
-  rating: number;
   price: number;
+  currency: string;
+  rating: number;
+  image: string;
+  quantity?: number;
 };
 
 type BookCardProps = {
@@ -14,7 +18,7 @@ type BookCardProps = {
   handleAddToCart: (book: Book) => void;
 };
 
-export function BookCard({ book, handleAddToCart }: BookCardProps) {
+const BookCard = ({ book, handleAddToCart }: BookCardProps) => {
   return (
     <div className="product-card bg-white p-4 shadow-lg rounded-lg transition duration-200 ease-in-out transform hover:scale-105">
       <img
@@ -52,3 +56,4 @@ export function BookCard({ book, handleAddToCart }: BookCardProps) {
     </div>
   );
 }
+export default BookCard;
