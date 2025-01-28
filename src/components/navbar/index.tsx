@@ -29,7 +29,7 @@ export function Navbar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
-              <a  className="font-serif text-black text-xl md:text-2xl lg:text-2xl">
+              <a className="font-serif text-black text-xl md:text-2xl lg:text-2xl">
                 Greyball-Ecommerce
               </a>
             </div>
@@ -45,7 +45,7 @@ export function Navbar() {
                   <h2 className="text-black text-[17px]">Cart</h2>
                   <div className="relative">
                     <CiShoppingCart className="text-lg lg:text-[22px]" />
-                    <span className="absolute -top-2 left-5 bg-blue-500 w-[20px] h-[20px] rounded-full font-bold text-[11px] text-white flex justify-center items-center">
+                    <span className="absolute -top-2 left-5 bg-blue-500 w-[22px] h-[22px] rounded-full font-bold text-[12px] text-white flex justify-center items-center">
                       {totalQuantity}
                     </span>
                   </div>

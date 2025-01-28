@@ -116,7 +116,7 @@ export function CartDrawer() {
           onClick={closeDrawer}
           className= "cursor-pointer hover:bg-blue-700 bg-blue-500 h-[35px] lg:h-[42px] text-[12px] text-white rounded-md flex justify-center items-center"
         >
-          <p>Checkout Now : $ {totalCost}</p>
+          <p>Total Price : $ {totalCost}</p>
         </div>
       )}
     </div>
