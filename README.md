@@ -23,3 +23,5 @@ Tailwind CSS: For fast, responsive, and customizable styling.
 Redux: For state management, including cart functionality and product information.
 
 ** Product JSON Api: https://mehedi1802hasan.github.io/data/data.json
+
+**Project overview Video Drive Link: https://drive.google.com/file/d/1tt9JFk5yqEW2ZtfJdnBQtQuaXNUusmNw/view?usp=sharing
