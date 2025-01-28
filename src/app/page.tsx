@@ -1,7 +1,7 @@
 // src/app/page.tsx
 
 import { Navbar } from '@/components/navbar';
-import { ProductList } from '@/components/product-list';
+import ProductList from '@/components/product-list';
 
 export const metadata = {
   title: 'greyball-ecommerce',
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <ProductList />
+      <ProductList/>
     </div>
   );
 }
