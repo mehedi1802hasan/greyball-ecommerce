@@ -7,7 +7,6 @@ import ResponsivePaginationComponent from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
 import BookCard from "./bookCard";
 
-
 type Book = {
   id: string;
   title: string;
@@ -16,7 +15,7 @@ type Book = {
   currency: string;
   rating: number;
   image: string;
-  quantity?: number; // Optional quantity field
+  quantity?: number;
 };
 
 type CartItem = {
@@ -27,7 +26,7 @@ type CartItem = {
   currency: string;
   rating: number;
   image: string;
-  quantity: number; // Ensure quantity is a number
+  quantity: number;
 };
 
 const ProductList = () => {
@@ -35,12 +34,11 @@ const ProductList = () => {
 
   // Add to cart handler
   const handleAddToCart = (product: Book): void => {
-    // Ensure quantity is always a number, defaulting to 1 if undefined
     const updatedProduct: CartItem = {
       ...product,
-      quantity: product.quantity ?? 1, // Default to 1 if quantity is undefined
+      quantity: product.quantity ?? 1,
     };
-    dispatch(addItem(updatedProduct)); // Dispatch the action to add item to cart
+    dispatch(addItem(updatedProduct));
   };
 
   const [books, setBooks] = useState<Book[]>([]);
@@ -60,7 +58,7 @@ const ProductList = () => {
       });
   }, []);
 
-  // Close the dropdown if clicked outside
+  // -----------Close the dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -78,13 +76,13 @@ const ProductList = () => {
     };
   }, []);
 
-  // Filter books based on search text
+  // -------Filter books based on search text
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(searchText.toLowerCase())
   );
   const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
 
-  // Sorting function
+  // -----------Sorting function
   const sortBooks = (books: Book[]) => {
     if (sortOption === "price-low-high") {
       return [...books].sort((a, b) => a.price - b.price);
@@ -97,7 +95,7 @@ const ProductList = () => {
     }
   };
 
-  // Get books for the current page
+  //--------- Get books for the current page
   const getBooksForCurrentPage = () => {
     const sortedBooks = sortBooks(filteredBooks);
     const startIndex = (currentPage - 1) * booksPerPage;
@@ -105,19 +103,19 @@ const ProductList = () => {
     return sortedBooks.slice(startIndex, endIndex);
   };
 
-  // Handle search input change
+  //---------- Handle search input change
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
     setCurrentPage(1);
   };
 
-  // Handle sorting option change
+  // ------------Handle sorting option change
   const handleSortChange = (sort: string) => {
     setSortOption(sort);
     setShowSortOptions(false);
   };
 
-  // Toggle sort options dropdown
+  // --------------Toggle sort options dropdown
   const toggleSortOptions = () => {
     setShowSortOptions((prev) => !prev);
   };
@@ -130,7 +128,7 @@ const ProductList = () => {
         </h3>
         <div className="flex md:gap-6 lg:gap-6 justify-between items-center mt-3 md:mt-0 lg:mt-0">
           <div className="relative">
-            {/* Sort Button */}
+            {/* --------Sort Button */}
             <button
               onClick={toggleSortOptions}
               className="btn bg-white text-black border rounded-lg py-2 px-4 hover:bg-gray-100 transition ease-in-out duration-200 flex items-center"
@@ -139,7 +137,7 @@ const ProductList = () => {
               <LuArrowUpDown className="ml-2" />
             </button>
 
-            {/* Sorting Options Dropdown */}
+            {/* -----------Sorting Options Dropdown */}
             {showSortOptions && (
               <div
                 ref={sortOptionsRef}
@@ -193,7 +191,7 @@ const ProductList = () => {
         </div>
       </div>
 
-      {/* Product Grid */}
+      {/* ------------Product Grid */}
       {filteredBooks.length === 0 ? (
         <div className="text-center text-lg font-semibold pt-12 text-gray-600">
           OOPS! No Books found.
@@ -210,7 +208,7 @@ const ProductList = () => {
             ))}
           </div>
 
-          {/* Pagination */}
+          {/* -------------Pagination */}
           <div className="pt-10 pb-16">
             <ResponsivePaginationComponent
               current={currentPage}

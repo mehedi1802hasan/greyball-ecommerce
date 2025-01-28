@@ -9,7 +9,7 @@ import { MdDeleteSweep } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 
-// Define types for cart items and the cart state
+// -------Define types for cart items and the cart state
 interface CartItem {
   id: string;
   title: string;
