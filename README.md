@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+##Greyball Ecommerce
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#**Greyball Ecommerce is an online store primarily focused on book-related products. The platform is built with a modern tech stack to provide a seamless shopping experience. The project implements various essential features, including a responsive UI, state management, SEO optimization, and more.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Features
+1. Navbar with Product Counter
+The Navbar displays the number of products added to the cart, providing an instant view of the user's cart status.
+2. Cart Drawer
+Clicking the cart number in the Navbar opens a drawer where the user can view all the added products.
+In the drawer, users can modify the quantity of products, and the price updates dynamically.
+3. Product Listing
+A list of available books is displayed with the following functionalities:
+Sorting: Sort products by various criteria (e.g., price, popularity).
+Search: A search bar to quickly find products by name or category.
+Pagination: The products are paginated for easier navigation.
+4. SEO Friendly
+The website is SEO optimized to ensure better visibility on search engines.
+Tech Stack
+Next.js: For server-side rendering and building a fast, scalable frontend.
+Tailwind CSS: For fast, responsive, and customizable styling.
+Redux: For state management, including cart functionality and product information.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+** Product JSON Api: https://mehedi1802hasan.github.io/data/data.json
